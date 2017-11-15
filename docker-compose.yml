@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+    nginx:
+        build: ./nginx
+        ports:
+            - "80:80"
+        volumes:
+            - ./www:/www
+        links:
+            - php
+        depends_on:
+            - php
+    php:
+        build: ./php
+        volumes:
+            - ./www:/www
+        expose:
+            - "9000"
+        depends_on:
+            - db
+            - redis
+            - memcached
+    db:
+        image: mariadb
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: yansongda
+        expose:
+            - "3306"
+    redis:
+        image: redis
+        expose:
+            - "6379"
+    memcached:
+        image: memcached
+        expose:
+            - "11211"
