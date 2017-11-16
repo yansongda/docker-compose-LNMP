@@ -32,6 +32,6 @@ docker-compose with latest php-fpm,nginx,redis,memcached,mariadb
 - gzip  on;
 
 ### Modified default.conf
-
+- html root path: /www/public
 - Adding support for handling with php file
 - Adding support for hiding index.php url string
