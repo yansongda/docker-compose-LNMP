@@ -1,4 +1,4 @@
-# docker-compose-lnmp
+# docker-compose-LNMP
 docker-compose with latest php-fpm,nginx,redis,memcached,mariadb
 
 ## php-fpm
