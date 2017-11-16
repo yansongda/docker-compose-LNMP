@@ -1,7 +1,7 @@
 # docker-compose-lnmp
-docker-compose with php7.0-fpm,nginx,redis,memcached,mariadb
+docker-compose with latest php-fpm,nginx,redis,memcached,mariadb
 
-## php7.0-fpm
+## php-fpm
 
 ### Added ext
 - bcmath

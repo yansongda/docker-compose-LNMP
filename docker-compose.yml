@@ -18,16 +18,16 @@ services:
         expose:
             - "9000"
         depends_on:
-            - db
+            - mariadb
             - redis
             - memcached
-    db:
+    mariadb:
         image: mariadb
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: yansongda
         volumes:
-            - ./data/db:/var/lib/mysql
+            - ./data/mariadb:/var/lib/mysql
         expose:
             - "3306"
     redis:
