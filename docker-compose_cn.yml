@@ -2,7 +2,7 @@ version: "3"
 
 services:
     nginx:
-        build: ./nginx
+        image: registry.cn-shenzhen.aliyuncs.com/yansongda/nginx
         ports:
             - "80:80"
         volumes:
@@ -12,7 +12,7 @@ services:
         depends_on:
             - php
     php:
-        build: ./php
+        image: registry.cn-shenzhen.aliyuncs.com/yansongda/php7-fpm
         volumes:
             - ./data/www:/www
         expose:
