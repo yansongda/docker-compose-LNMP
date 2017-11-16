@@ -1,4 +1,4 @@
-# docker-lnmp
+# docker-compose-lnmp
 docker-compose with php7.0-fpm,nginx,redis,memcached,mariadb
 
 ## php7.0-fpm
@@ -34,3 +34,4 @@ docker-compose with php7.0-fpm,nginx,redis,memcached,mariadb
 ### Modified default.conf
 
 - Adding support for handling with php file
+- Adding support for hiding index.php url string
