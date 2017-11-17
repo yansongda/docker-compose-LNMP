@@ -3,24 +3,26 @@ version: "3"
 services:
     nginx:
         image: registry.cn-shenzhen.aliyuncs.com/yansongda/nginx
-        ports:
-            - "80:80"
         volumes:
             - ./data/www:/www
         links:
             - php
         depends_on:
             - php
+        expose:
+            - "80"
+        ports:
+            - "80:80"
     php:
         image: registry.cn-shenzhen.aliyuncs.com/yansongda/php7-fpm
         volumes:
             - ./data/www:/www
-        expose:
-            - "9000"
         depends_on:
             - mariadb
             - redis
             - memcached
+        expose:
+            - "9000"
     mariadb:
         image: mariadb
         environment:
@@ -30,6 +32,8 @@ services:
             - ./data/mariadb:/var/lib/mysql
         expose:
             - "3306"
+        ports:
+            - "3306:3306"
     redis:
         image: redis
         volumes:
