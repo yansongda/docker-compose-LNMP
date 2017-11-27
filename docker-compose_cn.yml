@@ -4,7 +4,7 @@ services:
     nginx:
         image: registry.cn-shenzhen.aliyuncs.com/yansongda/nginx
         volumes:
-            - ./data/www:/www
+            - ./www:/www
         links:
             - php
         depends_on:
@@ -16,7 +16,7 @@ services:
     php:
         image: registry.cn-shenzhen.aliyuncs.com/yansongda/php7-fpm
         volumes:
-            - ./data/www:/www
+            - ./www:/www
         depends_on:
             - mariadb
             - redis
