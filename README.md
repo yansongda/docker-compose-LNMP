@@ -29,6 +29,7 @@ If you are looking for LNMongoP, please go to [docker-compose-LNMongoP](https://
 
 
 ## nginx
+*You can add sites by adding conf file in sites folder.*
 
 ### Modified nginx.conf
 - client_max_body_size 22m;    
@@ -36,6 +37,6 @@ If you are looking for LNMongoP, please go to [docker-compose-LNMongoP](https://
 - gzip  on;
 
 ### Modified default.conf
-- html root path: /www/public
+- html root path: /www/default/public
 - Adding support for handling with php file
 - Adding support for hiding index.php url string
