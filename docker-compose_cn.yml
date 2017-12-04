@@ -4,6 +4,7 @@ services:
     nginx:
         image: registry.cn-shenzhen.aliyuncs.com/yansongda/nginx
         volumes:
+            - ./sites:/etc/nginx/conf.d
             - ./www:/www
         links:
             - php
