@@ -27,6 +27,9 @@ If you are looking for LNMongoP, please go to [docker-compose-LNMongoP](https://
 - post_max_size = 20M
 - upload_max_filesize = 20M
 
+### Added Tools
+- composer (repo: https://packagist.phpcomposer.com)
+
 
 ## nginx
 *You can add sites by adding conf file in sites folder.*
