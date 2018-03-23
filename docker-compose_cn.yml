@@ -6,8 +6,8 @@ services:
         volumes:
             - ./sites:/etc/nginx/conf.d
             - ./www:/www
-        links:
-            - php
+        networks:
+            - lnmp
         depends_on:
             - php
         expose:
@@ -18,6 +18,8 @@ services:
         image: registry.cn-shenzhen.aliyuncs.com/yansongda/php7-fpm
         volumes:
             - ./www:/www
+        networks:
+            - lnmp
         depends_on:
             - mariadb
             - redis
@@ -31,6 +33,8 @@ services:
             MYSQL_DATABASE: yansongda
         volumes:
             - ./data/mariadb:/var/lib/mysql
+        networks:
+            - lnmp
         expose:
             - "3306"
         ports:
@@ -39,9 +43,16 @@ services:
         image: redis
         volumes:
             - ./data/redis:/data
+        networks:
+            - lnmp
         expose:
             - "6379"
     memcached:
         image: memcached
+        networks:
+            - lnmp
         expose:
             - "11211"
+
+networks:
+    lnmp:
