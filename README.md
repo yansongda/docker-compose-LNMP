@@ -1,45 +1,19 @@
 # docker-compose-LNMP
-Docker-compose with latest php-fpm,nginx,redis,memcached,mariadb
+Docker-compose with latest php-fpm, nginx, redis, memcached, mariadb and common tools like git, nodejs, yarn
 
-This repo is associated with [docker-php7-fpm](https://github.com/yansongda/docker-php7-fpm) and [docker-nginx](https://github.com/yansongda/docker-nginx)
+This repo is associated with [docker-php-fpm](https://github.com/yansongda/docker-php-fpm) and [docker-nginx](https://github.com/yansongda/docker-nginx)
 
 If you are looking for LNMongoP, please go to [docker-compose-LNMongoP](https://github.com/yansongda/docker-compose-LNMongoP)
 
 ## php-fpm
 
-### Added ext
-- bcmath
-- bz2 
-- gd 
-- iconv 
-- mcrypt 
-- mysqli
-- pdo
-- pdo_mysql
-- zip
-- mongodb
-- redis
-- memcached
-- swoole
-
-### Modified php.ini
-- memory_limit = 256M
-- post_max_size = 20M
-- upload_max_filesize = 20M
-
-### Added Tools
-- composer (repo: https://packagist.phpcomposer.com)
+For more infomation, please visit [https://github.com/yansongda/docker-php-fpm](https://github.com/yansongda/docker-php-fpm)
 
 
 ## nginx
-*You can add sites by adding conf file in sites folder.*
 
-### Modified nginx.conf
-- client_max_body_size 22m;    
-- server_tokens off;
-- gzip  on;
+For more infomation, please visit [https://github.com/yansongda/docker-nginx](https://github.com/yansongda/docker-nginx)
 
-### Modified default.conf
-- html root path: /www/default/public
-- Adding support for handling with php file
-- Adding support for hiding index.php url string
+## tools
+
+For more infomation, please visit [https://github.com/yansongda/docker-tools](https://github.com/yansongda/docker-tools)

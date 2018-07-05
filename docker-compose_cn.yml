@@ -15,7 +15,7 @@ services:
         ports:
             - "80:80"
     php:
-        image: registry.cn-shenzhen.aliyuncs.com/yansongda/php7-fpm
+        image: registry.cn-shenzhen.aliyuncs.com/yansongda/php-fpm
         volumes:
             - ./www:/www
         networks:
@@ -53,6 +53,12 @@ services:
             - lnmp
         expose:
             - "11211"
+    tools:
+        image: registry.cn-shenzhen.aliyuncs.com/yansongda/tools
+        volumes:
+            - ./www:/www
+        networks:
+            - lnmp
 
 networks:
     lnmp:

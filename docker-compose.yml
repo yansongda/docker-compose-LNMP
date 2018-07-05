@@ -53,6 +53,12 @@ services:
             - lnmp
         expose:
             - "11211"
+    tools:
+        image: yansongda/tools
+        volumes:
+            - ./www:/www
+        networks:
+            - lnmp
 
 networks:
     lnmp:
